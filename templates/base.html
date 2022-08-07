@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+</head>
+
+<body>
+   
+    <header class="header">
+        <nav class="navbar navbar-expand-lg fixed-top py-3">
+            <div class="container"><a class="navbar-brand" href=""><img src="{% static '/images/award.png' %}" class="img-fluid" width="52px">
+                SK Hospital</a>
+                <button onclick="show_hide()" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+
+                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a href="/" class="nav-link text-uppercase font-weight-bold">Home
+                                <span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item"><a href="{% url 'about' %}" class="nav-link text-uppercase font-weight-bold">About</a></li>
+                        <li class="nav-item"><a href="{% url 'departments' %}" class="nav-link text-uppercase font-weight-bold">departments</a>
+                        </li>
+                        <li class="nav-item"><a href="{% url 'doctors' %}" class="nav-link text-uppercase font-weight-bold">doctors</a>
+                        </li>
+                        <li class="nav-item"><a href="{% url 'services' %}" class="nav-link text-uppercase font-weight-bold">Services</a>
+                        </li>
+                        <li class="nav-item"><a href="{% url 'booking' %}" class="nav-link text-uppercase font-weight-bold">book appointment</a>
+                        </li>
+                        <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link text-uppercase font-weight-bold">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    {% block content %} {% endblock %}
+    
+
+    <footer class="footer" >
+        <div class="container" >
+            <div class="row">
+                <div class="footer-col">
+                    <h4>important links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="{% url 'about' %}">ABOUT</a></li>
+                        <li><a href="{% url 'departments' %}">DEPARTMENT</a></li>
+                        <li><a href="{% url 'doctors' %}">DOCTORS</a></li>
+                        <li><a href="{% url 'services' %}">SERVICES</a></li>
+                        <li><a href="{% url 'booking' %}">BOOK APPOINTMENT</a></li>
+                        <li><a href="{% url 'contact' %}">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>DEPARTMENTS</h4>
+                    <ul>
+                        <li><a href="{% url 'departments' %}">Cardiology</a></li>
+                        <li><a href="{% url 'departments' %}">Medical Gastroenterology</a></li>
+                        <li><a href="{% url 'departments' %}">Neurology</a></li>
+                        <li><a href="{% url 'departments' %}">Obstetrics and Gynecology</a></li>
+                        <li><a href="{% url 'departments' %}">Orthopedics</a></li>
+                        <li><a href="{% url 'departments' %}">Surgical Gastroenterology</a></li>
+                        <li><a href="{% url 'departments' %}">Urology</a></li>
+                    </ul>  
+                </div>
+                <div class="footer-col">
+                    <h4>SK HOSPITAL</h4>
+                    <ul>
+                        <li><a href="/">Edappazhinji, Pangode,, Thiruvananthapuram - 695006, Kerala, India</a></li>
+                        <li><a href="/">baenquiry@skhospitals.com</a></li>
+                        <li><a href="/">+91 471 2356260</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+ 
+    
+
+    
+    
+    
+   
+    <script>
+        function show_hide() {
+            var click = document.getElementById("navbarSupportedContent");
+            if (click.style.display === "none") {
+                click.style.display = "block";
+            } else {
+                click.style.display = "none";
+            }
+        }
+
+    </script>
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script> src = "{% static '/js/sj.js' %}"</script>
+    </body>
+    
+    </html>

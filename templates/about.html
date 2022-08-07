@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About{% endblock %}
+
+{% block content %}
+<br>
+<section class="w3l-about-breadcrumb">
+    <div class="">
+        <div class="container py-lg-5 py-md-3">
+            <br>
+            <h2 class="text-center">About Company</h2>
+            <p class="text-center"><b>Story about our hospital</b></p>
+            
+            <h3>Sk Hospital</h3>
+            <h5>SK Hospital was established in the year 2003 and inaugurated by the then Chief Minister of Kerala Shri. A K Antony who
+            later went on to become the Defence Minister of India.</h5>
+            <br>
+            <a href="#url"><img src="{% static '/images/sk.webp' %}" class="img-fluid" alt="content-photo"></a>
+            <br>
+            <br><br>
+            <h5>Started as a modest 30 bed in-patient facility along with few departments, SK Hospital has now become a tertiary care
+            NABH Safe-I certified multi-speciality healthcare institution with 300 beds.</h5>
+            <p>An advanced rehabilitation centre, a joint venture of SK hospital and 360 degree spine wellness centre, is now
+            functional at SK hospital. This centre provides state of the art rehabilitation services and non-invasive procedures for
+            issues like joint pains, spinal problems and musculoskeletal problems</p>
+            
+        </div>
+    </div>
+</section>
+<div class="">
+    <div class="content-main py-lg-5 py-md-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 content-left">
+                    <h4>We Offer a full range of Professional mental Health services to children, Adults,
+                        Couples, and Families.</h4>
+                    <p class="mb-0">SK Hospital, along with Nagarjuna Ayurveda (a leading Ayurveda hospital group) has launched an exclusive Ayurveda centre
+                    in Trivandrum at SK hospital. This centre offers both curative and wellness Ayurveda treatments. A team of eminent
+                    Ayurveda physicians led by Dr. MRV Namboothiri supports the centre in our vision to provide the best Ayurvedic treatment
+                    in Trivandrum. </p>
+                    
+                </div>
+                <div class="col-lg-4 content-photo mt-lg-0 mt-md-5 mt-4">
+                    <h4>About Us</h4>
+                    <a href="#url"><img src="{% static '/images/healthcare.jpg' %}" class="img-fluid" alt="content-photo"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

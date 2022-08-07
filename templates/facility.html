@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Departments{% endblock %}
+
+{% block content %}
+<br>
+<section class="w3l-about-breadcrumb">
+    <br><br><br>
+    <h1 class="text-center mx-auto font-weight-bold "><b>OUR DEPARTMENTS</b></h1>
+    <div class="">
+        {% for d in dept %}
+        <div class="container py-lg-5 py-md-3 bg-secondary border border-warning-rounded">
+            <br>
+            <h2 class="text-center text-white" >{{d.dep_name}}</h2>
+            <p class=" text-center">{{d.dep_desc}}</p>
+        </div>
+        <br><br>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}
