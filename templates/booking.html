@@ -11,8 +11,15 @@
     <hr>
     <h2 class="text-center">MAKE AN APPOINTMENT</h2>
     <hr>
-   
+<div>
+    {% for message in messages%}
+    <div class="alert alert-primary" role="alert">
+        {{message}}
+    </div>
+    {% endfor %}
+</div>
    <div class="container w-50 p-3 bg-secondary text-center">
+    
             <form action="" method="POST">
                 {% csrf_token %}
                 {{form|crispy}}

@@ -8,7 +8,7 @@ def booking(request):
         form = BookingForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request,'conf.html')
+            messages.info(request,"We have recived your appointment request,Our representative will call you")
     form = BookingForm()
     dic_form = {
         'form': form
