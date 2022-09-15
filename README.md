@@ -2,9 +2,8 @@
 # Hospital Management System
 
 SK Hospital is a online website which enables hospitals to manage information.
+![Screenshot (29)](https://user-images.githubusercontent.com/105106551/190357289-8b1ad679-f9ba-4d06-859c-b03dd1582a73.png)
 
-
-![alt text](http://"C:\Users\Gouthaami\Pictures\Screenshots\Screenshot (29).png")
 
 
 ## 🚀 About Me
