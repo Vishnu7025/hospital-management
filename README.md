@@ -26,4 +26,4 @@ I’m a Python | Django developer based in Trivandrum, Kerala, curious to learn 
 Link to live project:
 https://skhospital.pythonanywhere.com/
 
-"C:\Users\Gouthaami\Videos\New Tab - Google Chrome 2022-09-14 09-47-36.mp4"
+
